@@ -19,9 +19,48 @@ and read keyboard inputs from the terminal in Go.
 2. - [ ] Setup Environment
       
       - [ ] Create main.go file
-      - [ ] Create main_test.go file
-      - [ ] Compile executable with `go build -o [executable_name]` - add command to README under Usage.
+      - [ ] Create [**test**] file
+      - [ ] Compile executable with `go build -o [executable_name]` command using assigning relevant executable name - add command 
+      for compiling to README under Usage.
+      
+      **Example**:
+      - [ ] Create main.go file
+      - [ ] Create **main_test.go** file
+      - [ ] Compile executable with `go build -o temp` - add command for compiling to README under Usage.
+      
+3. - [ ] Declare the arguments(s) that will be parsed into the CLI and the keyboard input that will be read from the terminal
 
+      **Example**:
+      ```
+      package main
+
+      var originUnit string	// the arguments(s) that will be parsed into the CLI
+      var originValue float64	// the keyboard input that will be read from the terminal
+
+      var err error //Error output
+
+      var errInvalidArguments = errors.New("Invalid arguments")	// Error output for invalid arguments
+      var errReadingInput = errors.New("Error reading input")	// Error output for issue with reading input
+      ```
+      
+3. - [ ] Declare the keyboard input that will be read from the terminal
+
+      **Example**:
+      ```
+      package main
+
+      var originUnit string	// the arguments(s) that will be parsed into the CLI
+      var originValue float64	// the keyboard input that will be read from the terminal
+
+      var shouldConvertAgain string //Expected Output
+
+      var err error //Error output
+
+      var errInvalidArguments = errors.New("Invalid arguments")	// Error output for invalid arguments
+      var errReadingInput = errors.New("Error reading input")	// Error output for issue with reading input
+      ```
+
+      
       
       
 ## Summary
