@@ -28,38 +28,39 @@ and read keyboard inputs from the terminal in Go.
       - [ ] Create **main_test.go** file
       - [ ] Compile executable with `go build -o temp` - add command for compiling to README under Usage.
       
-3. - [ ] Declare the arguments(s) that will be parsed into the CLI and the keyboard input that will be read from the terminal
-
-      **Example**:
-      ```
-      package main
-
-      var originUnit string	// the arguments(s) that will be parsed into the CLI
-      var originValue float64	// the keyboard input that will be read from the terminal
-
-      var err error //Error output
-
-      var errInvalidArguments = errors.New("Invalid arguments")	// Error output for invalid arguments
-      var errReadingInput = errors.New("Error reading input")	// Error output for issue with reading input
-      ```
+3. - [ ] Declare variables for the following:
+      **Input**
+      - The arguments(s) that will be parsed into the CLI
+      - The keyboard input that will be read from the terminal
+      - Other input functionality that the app needs
       
-3. - [ ] Declare the keyboard input that will be read from the terminal
+      **Output**
+      - The error responsible for handling invalid arguments(s) that will be parsed into the CLI
+      - The error responsible for handling issues with keyboard input that will be read from the terminal
+      - The error responsible for handling all other potential errors the app may encounter 
 
       **Example**:
       ```
       package main
 
-      var originUnit string	// the arguments(s) that will be parsed into the CLI
-      var originValue float64	// the keyboard input that will be read from the terminal
+      import (
+            "errors"
+            "fmt"
+            "os"
+            "strings"
+      )
 
-      var shouldConvertAgain string //Expected Output
+      var originUnit string   // Input: The arguments(s) that will be parsed into the CLI
+      var originValue float64 // Input: The keyboard input that will be read from the terminal
 
-      var err error //Error output
+      var shouldConvertAgain string // Input: Other input functionality that the app needs 
 
-      var errInvalidArguments = errors.New("Invalid arguments")	// Error output for invalid arguments
-      var errReadingInput = errors.New("Error reading input")	// Error output for issue with reading input
+      var err error //Output: The error responsible for handling all other potential errors the app may encounter
+
+      var errInvalidArguments = errors.New("Invalid arguments") // Output: The error responsible for handling invalid arguments(s) that will be parsed into the CLI
+      var errReadingInput = errors.New("Error reading input")   // Output: The error responsible for handling issues with keyboard input that will be read from the        terminal
+
       ```
-
       
       
       
