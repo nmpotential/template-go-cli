@@ -77,7 +77,7 @@ and read keyboard inputs from the terminal in Go.
       func main() {
 	// We use the built-in len function to check if the length of os.Args is different than 2.
 	if len(os.Args) != 2 {
-		// If argument is not valid we invoke the printError() function, passing errInvalidArguments as the argument.
+		// If argument is invalid we invoke the printError() function, passing errInvalidArguments as the argument.
 		printError(errInvalidArguments)
 	}
       
@@ -87,7 +87,17 @@ and read keyboard inputs from the terminal in Go.
       
       
 
-5. - [ ] Read Argument(s)
+5. - [ ] Read Argument(s), below argument validation statement:
+
+      - [ ] Invoke suitable functions to ensure consistency when reading command line 
+      arguments provided by the user, ```os.Args[1]``` passing as the argument - Note:
+      index 0 is assigned to the executable by default 
+      - [ ] Assign the result to the previously defined variable that will be parsed into the CLI.
+      
+    **Example:**
+ ```
+	originUnit := strings.ToUpper(os.Args[1])   
+```
 
 6. - [ ] Read Keyboard Inputs
 
