@@ -9,13 +9,15 @@ and read keyboard inputs from the terminal in Go.
       
       - User compiles and runs executable from command-line parsing [**valid argument**]
       - User is then prompted to enter [**input value**]
-      - Then the app prints out [**desired outcome**]
-      
+      - Then the app reads **keyboard input** ([**input value**]) from terminal and prints out **desired outcome**
+      - Finally, the app prompts user to enter [**input value**] to either restart or end the app
+            
       **Example:**
       - User compiles and runs executable from command-line parsing **the unit of temperature we want to convert from** 
-      - User is then prompted to enter **input value**
-      - Then the app prints out **converted temperature between Fahrenheit and Celsius**.
-      
+      - User is then prompted to enter **current temperature**
+      - Then the app reads **keyboard input** (**current temperature**) from terminal and prints out **converted temperature between Fahrenheit and Celsius**.
+      - Finally, the app prompts user to enter **Y/N** to either restart or the end app
+
 2. - [ ] Setup Environment
       
       - [ ] Create main.go file
@@ -32,7 +34,7 @@ and read keyboard inputs from the terminal in Go.
       **Input**
       - The arguments(s) that will be parsed into the CLI
       - The keyboard input that will be read from the terminal
-      - Other input functionality that the app needs
+      - The input functionality that enables the app to either restart or end 
       
       **Output**
       - The error responsible for handling invalid arguments(s) that will be parsed into the CLI
@@ -45,15 +47,12 @@ and read keyboard inputs from the terminal in Go.
 
       import (
             "errors"
-            "fmt"
-            "os"
-            "strings"
       )
 
       var originUnit string   // Input: The arguments(s) that will be parsed into the CLI
       var originValue float64 // Input: The keyboard input that will be read from the terminal
 
-      var shouldConvertAgain string // Input: Other input functionality that the app needs 
+      var shouldConvertAgain string // Input: The input functionality that enables the app to either restart or end 
 
       var err error //Output: The error responsible for handling all other potential errors the app may encounter
 
