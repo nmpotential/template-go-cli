@@ -68,9 +68,10 @@ and read keyboard inputs from the terminal in Go.
       
 4. - [ ] Validate Argument(s) in the ```func main()``` definition:
 
-      - [ ] Create a validation rule to check if arguments are valid
-      - [ ] If invalid, invoke the printError() function, passing **the error variable** 
-      **responsible for handling invalid arguments(s) that will be parsed into the CLI**
+      - [ ] Create a function to check if arguments are valid
+      - [ ] If argument invalid, invoke the print argument validation statement using 
+      printError() function, passing **the error variable responsible for handling**
+      **invalid arguments(s) that will be parsed into the CLI**
       
       **Example:**
  ```
@@ -87,19 +88,33 @@ and read keyboard inputs from the terminal in Go.
       
       
 
-5. - [ ] Read Argument(s), below argument validation statement:
+5. - [ ] Read Argument, below argument validation statement:
 
       - [ ] Invoke suitable functions to ensure consistency when reading command line 
       arguments provided by the user, ```os.Args[1]``` passing as the argument - Note:
-      index 0 is assigned to the executable by default 
-      - [ ] Assign the result to the previously defined variable that will be parsed into the CLI.
+      index 0, ```os.Args[0]``` is assigned to the executable by default 
+      - [ ] Assign the result to the previously defined variable that will 
+      be parsed as an argument into the CLI.
       
     **Example:**
  ```
-	originUnit := strings.ToUpper(os.Args[1])   
+ 	// Invoke strings.ToUpper function to ensure consistency when reading command line 
+      	originUnit value provided by the user
+	originUnit := strings.ToUpper(os.Args[1])// originUnit is the 2nd [1] argument parsed into CLI, executable is 1st argument [0] by default    
 ```
 
-6. - [ ] Read Keyboard Inputs
+6. - [ ] Read Keyboard Input
+
+      - [ ] Print statement that will prompt user to enter desired input that
+      will be read from the terminal
+      - [ ] Invoke the fmt.Scanln() function, passing the address to the keyboard 
+      input variable that as the argument.
+      - [ ] Assign the two return values to the variables _ and err respectively.
+      - [ ] Next, create an if statement checking if err != nil, and if that's true, 
+      invoke the printError() function, passing the error responsible for handling 
+      issues with keyboard input that will be read from the terminalas its argument.
+
+      
 
 7. - [ ] Func
 
