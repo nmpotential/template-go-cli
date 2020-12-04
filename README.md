@@ -113,6 +113,23 @@ and read keyboard inputs from the terminal in Go.
       - [ ] Next, create an if statement checking if err != nil, and if that's true, 
       invoke the printError() function, passing the error responsible for handling 
       issues with keyboard input that will be read from the terminalas its argument.
+      
+      **Example**
+```
+	// Read current temperature (originValue) Keyboard Input
+	for {
+		// Print statement that will prompt user to enter current temperature
+		fmt.Print("What is the current temperature in " + originUnit + " ? ")
+		// Invoke the fmt.Scanln() function, passing &originValue as the argument.
+		// Assign the two return values to the variables _ and err respectively.
+		_, err := fmt.Scanln(&originValue)
+ 		// If statement checking if err != nil, and if that's true,
+ 		// invoke the printError() function, passing errReadingInput as its argument.
+		if err != nil {
+			printError(errReadingInput)
+		}
+```
+   
 
       
 
