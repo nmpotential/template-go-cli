@@ -98,9 +98,12 @@ and read keyboard inputs from the terminal in Go.
       
     **Example:**
  ```
- 	// Invoke strings.ToUpper function to ensure consistency when reading command line 
-      	originUnit value provided by the user
-	originUnit := strings.ToUpper(os.Args[1])// originUnit is the 2nd [1] argument parsed into CLI, executable is 1st argument [0] by default    
+	//5. Read origin unit
+	// Invoke strings.ToUpper function to ensure consistency when reading command line
+	// originUnit value provided by the user
+	// originUnit is the 2nd argument, os.Args[1], parsed into CLI 
+	// the executable is 1st argument , os.Args[0], by default
+	originUnit := strings.ToUpper(os.Args[1])
 ```
 
 6. - [ ] Read Keyboard Input
