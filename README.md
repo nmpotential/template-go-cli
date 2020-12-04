@@ -9,14 +9,19 @@ and read keyboard inputs from the terminal in Go.
       
       - User compiles and runs executable from command-line parsing [**valid argument**]
       - User is then prompted to enter [**input value**]
-      - Then the app reads **keyboard input** ([**input value**]) from terminal and prints out **desired outcome**
+      - Then the app reads **keyboard input** ([**input value**]) from terminal 
+      - Core functionality will occur using **keyboard input** before the **desired outcome** occurs
       - Finally, the app prompts user to enter [**input value**] to either restart or end the app
             
       **Example:**
       - User compiles and runs executable from command-line parsing **the unit of temperature we want to convert from** 
       - User is then prompted to enter **current temperature**
-      - Then the app reads **keyboard input** (**current temperature**) from terminal,
-      converts **current temperature** and prints out **converted temperature between Fahrenheit and Celsius**.
+      - Then the app reads **keyboard input** (**current temperature**) from terminal
+      - Core functionality occurs that:
+      	
+	- **Converts current temperature from Fahrenheit to Celsius** and prints out **converted temperature in Celsius**. 
+      	- **Converts current temperature from Celsius to Fahrenheit** and prints out **converted temperature in Fahrenheit**.
+      
       - Finally, the app prompts user to enter **Y/N** to either restart or the end app
 
 2. - [ ] Setup Environment
@@ -146,11 +151,12 @@ and read keyboard inputs from the terminal in Go.
 
      
 
-8. - [ ] State each core functionality of app and create functions for each  - Outside of ```func main()```
+8. - [ ] Create functions for each core functionality of app  - Outside of ```func main()```
 
 	**Example:**
 	
-	- **Convert ***current temperature*** from Fahrenheit to Celsius**
+	- **Convert ***current temperature*** from Fahrenheit to Celsius** and print
+	out **converted temperature in Celsius**.
 	```
 		func convertToCelsius(value float64) {
 		convertedValue := (value - 32) * 5 / 9
@@ -158,7 +164,8 @@ and read keyboard inputs from the terminal in Go.
 	}
 	```
 	
-	- **Convert ***current temperature*** from Celsius to Fahrenheit**
+	- **Convert ***current temperature*** from Celsius to Fahrenheit** and print
+	out **converted temperature in Fahrenheit**.
 	```
 		func convertToFahrenheit(value float64) {
 		convertedValue := (value * 9 / 5) + 32
