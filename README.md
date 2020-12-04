@@ -15,7 +15,8 @@ and read keyboard inputs from the terminal in Go.
       **Example:**
       - User compiles and runs executable from command-line parsing **the unit of temperature we want to convert from** 
       - User is then prompted to enter **current temperature**
-      - Then the app reads **keyboard input** (**current temperature**) from terminal and prints out **converted temperature between Fahrenheit and Celsius**.
+      - Then the app reads **keyboard input** (**current temperature**) from terminal,
+      converts **current temperature** and prints out **converted temperature between Fahrenheit and Celsius**.
       - Finally, the app prompts user to enter **Y/N** to either restart or the end app
 
 2. - [ ] Setup Environment
@@ -133,14 +134,60 @@ and read keyboard inputs from the terminal in Go.
 		}
 ```
    
+7. - [ ] Create function that handles runtime errors - Outside of ```func main()```
 
-      
+	**General Example** - Can be used for any app
+	```
+		func printError(err error) {
+		fmt.Fprintf(os.Stderr, "error: %v\n", err)
+		os.Exit(1)
+	}
+	```
 
-7. - [ ] Func
+     
 
-8. - [ ] Prompt Restarting App
+8. - [ ] State each core functionality of app and create functions for each  - Outside of ```func main()```
 
-9. - [ ] Parse Prompt Answer
+	**Example:**
+	
+	- **Convert ***current temperature*** from Fahrenheit to Celsius**
+	```
+		func convertToCelsius(value float64) {
+		convertedValue := (value - 32) * 5 / 9
+		fmt.Printf("%v F = %.0f C\n", value, convertedValue)
+	}
+	```
+	
+	- **Convert ***current temperature*** from Celsius to Fahrenheit**
+	```
+		func convertToFahrenheit(value float64) {
+		convertedValue := (value * 9 / 5) + 32
+		fmt.Printf("%v C = %.0f F\n", value, convertedValue)
+	}
+	```
+	
+9. - [ ] Generate methods that will utilise core functionality functions
+
+	**Example:**
+	```
+	// If statement to check if originUnit is equal to "C" (notice the capital casing).
+	// If so, invoke the convertToFahrenheit() function passing originValue as the argument.
+	if originUnit == "C" {
+		// Convert current temperature from Celsius to Fahrenheit
+		convertToFahrenheit(originValue)
+		// Otherwise, create an else block and invoke the convertToCelsius() function,
+		// passing originValue as the argument.
+	} else {
+		// Convert current temperature from Fahrenheit to Celsius
+		convertToCelsius(originValue)
+	}
+	```
+
+
+
+9. - [ ] Prompt Restarting App
+
+10. - [ ] Parse Prompt Answer
 
 
       
