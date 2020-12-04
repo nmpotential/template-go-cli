@@ -4,8 +4,8 @@ and read keyboard inputs from the terminal in Go.
 
 ## Steb by Step Guide to: Building a CLI app that parses CLI arguments and reads keyboard inputs from the terminal in Go
 
-1. - [ ] Briefly summaries how the apps supposed to work and put in **summary** of README.md - This will be updated as 
-      functionality and implementation are refined:
+- [ ] Step 1. Briefly summaries how the apps supposed to work using the outline below 
+and put in **summary** of README.md - This will be updated as functionality and implementation are refined:
       
       - User compiles and runs executable from command-line parsing [**valid argument**]
       - User is then prompted to enter [**input value**]
@@ -26,16 +26,20 @@ and read keyboard inputs from the terminal in Go.
 
 2. - [ ] Setup Environment
       
+      - [ ] Go mod???
       - [ ] Create main.go file
       - [ ] Create [**test**] file
-      - [ ] Compile executable with `go build -o [executable_name]` command using assigning relevant executable name - add command 
-      for compiling to README under Usage.
+      - [ ] Compile executable with `go build -o [executable_name]` command assigning relevant executable name - 
+      add command for compiling to README under Usage.
+      - [ ] Docker???
       
       **Example**:
+      - [ ] Go mod???
       - [ ] Create main.go file
       - [ ] Create **main_test.go** file
       - [ ] Compile executable with `go build -o temp` - add command for 
       compiling to README under Usage.
+      - [ ] Docker???
       
 3. - [ ] Declare variables for the following (refer to summary) in main.go file:
       

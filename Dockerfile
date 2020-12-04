@@ -10,6 +10,6 @@ RUN chown -R projects:projects /src/app
 
 USER projects
 
-COPY . .
+COPY example .
 
 RUN go install -v ./...
