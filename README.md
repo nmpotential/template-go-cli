@@ -112,7 +112,7 @@ and read keyboard inputs from the terminal in Go.
       - [ ] Assign the two return values to the variables _ and err respectively.
       - [ ] Next, create an if statement checking if err != nil, and if that's true, 
       invoke the printError() function, passing the error responsible for handling 
-      issues with keyboard input that will be read from the terminalas its argument.
+      issues with keyboard input that will be read from the terminal as its argument.
       
       **Example**
 ```
