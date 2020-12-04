@@ -1,5 +1,5 @@
 # go-cli-template
-Template that guides you through building a command line application which has the functionality to parse  CLI arguments 
+Use template as a guide for building command line applications with the functionality to parse  CLI arguments 
 and read keyboard inputs from the terminal in Go.
 
 ## Steb by Step Guide to: Building a CLI app that parses CLI arguments and reads keyboard inputs from the terminal in Go
